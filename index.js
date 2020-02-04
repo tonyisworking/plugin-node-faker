@@ -12,7 +12,7 @@ function convertFakerData(data) {
     // find all the fakers
     if (typeof value === 'string') {
       return value.replace(/@faker\.[a-z]+\.[a-z][a-zA-Z]+(\([^\)]*\))?@/g, (match) => {
-        var dot = match.indexOf('.'),
+        var dot = match.indexOf('.', 8),
             brace = match.indexOf('('),
             end = match.length -1,
             fakerObject = match.slice(7, dot),
