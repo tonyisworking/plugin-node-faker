@@ -11,7 +11,7 @@ function convertFakerData(data) {
   var stringData = JSON.stringify(data, (key, value) => {
     // find all the fakers
     if (typeof value === 'string') {
-      value.replace(/@faker\.[a-z]+\.[a-z][a-zA-Z\.]+(\([^\)]*\))?@/g, (match) => {
+      return value.replace(/@faker\.[a-z]+\.[a-z][a-zA-Z\.]+(\([^\)]*\))?@/g, (match) => {
         var fakerItem = match.slice(7, match.length-1);
         try {
           return faker.fake(`{{${fakerItem}}}`);
