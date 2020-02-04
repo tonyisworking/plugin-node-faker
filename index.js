@@ -15,8 +15,8 @@ function convertFakerData(data) {
         var dot = match.indexOf('.'),
             brace = match.indexOf('('),
             end = match.length -1,
-            fakerObject = match.slice(7, dot)
-            fakerFunction = match.slice(dot + 1, brace >= 0? brace: end)
+            fakerObject = match.slice(7, dot),
+            fakerFunction = match.slice(dot + 1, brace >= 0? brace: end),
             fakerOptions = [];
         if(brace >= 0) {
           fakerOptions = JSON.parse('[' + match.slice(brace+1, end -1) + ']');
