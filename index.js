@@ -11,10 +11,18 @@ function convertFakerData(data) {
   var stringData = JSON.stringify(data, (key, value) => {
     // find all the fakers
     if (typeof value === 'string') {
-      return value.replace(/@faker\.[a-z]+\.[a-z][a-zA-Z\.]+(\([^\)]*\))?@/g, (match) => {
-        var fakerItem = match.slice(7, match.length-1);
+      return value.replace(/@faker\.[a-z]+\.[a-z][a-zA-Z]+(\([^\)]*\))?@/g, (match) => {
+        var dot = match.indexOf('.'),
+            brace = match.indexOf('('),
+            end = match.length -1,
+            fakerObject = match.slice(7, dot)
+            fakerFunction = match.slice(dot + 1, brace >= 0? brace: end)
+            fakerOptions = [];
+        if(brace >= 0) {
+          fakerOptions = JSON.parse('[' + match.slice(brace+1, end -1) + ']');
+        }
         try {
-          return faker.fake(`{{${fakerItem}}}`);
+          return faker[fakerObject][fakerFunction].apply(faker[fakerObject], fakerOptions);
         } catch (e) {
           console.log(`'${match}' could not be processed: `, e);
           return match;
