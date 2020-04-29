@@ -2,11 +2,17 @@
 
 This is a plugin that adds Faker data to your `data.json` file at build time.
 
+## Compatibility
+This version (v2.\*) of the plugin is tested to be compatible with [@pattern-lab/patternlab-node v5.9.2](https://github.com/pattern-lab/patternlab-node/tree/v5.9.2). It will likely be compatible with future v5.* version.
+
+For [@pattern-lab/patternlab-node v2.12](https://github.com/pattern-lab/patternlab-node/tree/v2.12.0) please refer to version 1.* of this plugin.
+
 ## Install
 
-`npm install --save plugin-node-faker`
-
-(Remember to run `NPM run postinstall` in your Pattern Lab base directory.)
+```bash
+npm install --save plugin-node-faker
+npm run pl:install plugin-node-faker
+```
 
 ## Usage
 
@@ -15,8 +21,8 @@ In `data.json`, add Faker API methods as strings. Call the vars as you normally 
 ```
 {
   "company" : {
-    "name" : "faker.name.findName",
-    "url" : "faker.internet.url"
+    "name" : "@faker.name.findName@",
+    "url" : "@faker.internet.url@"
   }
 }
 ```
