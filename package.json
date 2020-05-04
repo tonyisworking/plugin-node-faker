@@ -1,6 +1,6 @@
 {
-  "name": "plugin-node-faker",
-  "version": "1.0.1",
+  "name": "@g749/plugin-node-faker",
+  "version": "1.0.2",
   "description": "A plugin for Pattern Lab that allows Faker in the data.json file",
   "keywords": [
     "Pattern Lab",
@@ -12,9 +12,9 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/cloudsociety/plugin-node-faker.git"
+    "url": "git://github.com/749/plugin-node-faker.git"
   },
-  "bugs": "https://github.com/cloudsociety/plugin-node-faker/issues",
+  "bugs": "https://github.com/749/plugin-node-faker/issues",
   "scripts": {
     "postinstall": "node ./postinstall.js"
   },
@@ -24,6 +24,6 @@
   "author": "David Cross",
   "license": "MIT",
   "engines": {
-    "node": ">=5.0"
+    "node": ">=8.0"
   }
 }
