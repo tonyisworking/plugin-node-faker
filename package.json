@@ -1,6 +1,6 @@
 {
   "name": "@g749/plugin-node-faker",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "A plugin for Pattern Lab that allows Faker in the data.json file",
   "keywords": [
     "Pattern Lab",
@@ -24,6 +24,9 @@
   "author": "David Cross",
   "license": "MIT",
   "engines": {
-    "node": ">=8.0"
+    "node": ">=8.5"
+  },
+  "@pattern-lab-plugin": {
+    "name": "plugin-node-faker"
   }
 }

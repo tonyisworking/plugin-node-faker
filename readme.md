@@ -4,7 +4,7 @@ This is a plugin that adds Faker data to your `data.json` file at build time.
 
 ## Install
 
-`npm install --save plugin-node-faker`
+`npm install --save @g749/plugin-node-faker`
 
 (Remember to run `NPM run postinstall` in your Pattern Lab base directory.)
 
@@ -39,3 +39,10 @@ Check out Faker on NPM for all the different API methods (https://www.npmjs.com/
 ## Work in process
 
 A tale of two listeners. For some reason, I can't update the listitems object and the pattern-specific data object with one listener. `data.json` doesn't care where it's changed, but these other two get operated on in different places.
+
+## Developing
+
+Use the following to install dev dependecies:
+```bash
+PATTERLAB_PLUGIN_DEV=@g749/plugin-node-faker npm install
+```
