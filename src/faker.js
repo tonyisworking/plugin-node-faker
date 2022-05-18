@@ -45,7 +45,7 @@ function addMainFakerData (patternlab) {
 function addPatternFakerData (args) {
   const pattern = args[1]
 
-  log.debug(`called: addPatternFakerData(${JSON.stringify(arguments)})`)
+  //   log.debug(`called: addPatternFakerData(${JSON.stringify(arguments)})`)
   // Tried changing listitems here, but it doesn't want to appear in patterns at this event.
   // Probably tarketing wrong object data.
   // More research later. For now, two separate events.
