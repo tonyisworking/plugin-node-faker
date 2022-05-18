@@ -10,9 +10,24 @@ For [@pattern-lab/patternlab-node v2.12](https://github.com/pattern-lab/patternl
 ## Install
 
 ```bash
-npm install --save plugin-node-faker
-npm run pl:install plugin-node-faker
+npm install --save @tonyisworking/plugin-node-faker
+npm run pl:install @tonyisworking/plugin-node-faker
 ```
+
+If `patternlab-config.json` isn't updated add this to enable the plugin:
+
+```
+ "plugins": {
+    "@tonyisworking/plugin-node-faker": {
+      "enabled": true,
+      "initialized": false,
+      "options": {
+        "tabsToAdd": []
+      }
+    }
+  }
+```
+
 
 ## Usage
 
